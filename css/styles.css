@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90deg, #3a2c4d 0%, #1a1a2e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #f0f0f0;
+}
+
+header .header-title{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.header-title strong{
+    font-weight: 700;
+    background-color: #0b0b0b70;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+header .header-nav{
+    align-items: center;
+}
+
+.header-nav .nav-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-list li{
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-list li a img{
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+    filter: invert(1);
+}
+
+.nav-list li a:hover{
+    filter: invert(54%) sepia(77%) saturate(749%) hue-rotate(326deg) brightness(101%) contrast(101%);
+}
+main{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: justify;
+}
+
+.main-content h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3a2c4d;
+    text-align: center;
+}
+
+.container-wrapper{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    margin-top: 80px; /* Adjusted for fixed header */
+    margin-bottom: 80px; /* Adjusted <for fixed footer */
+    gap: 20px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flex-container article{
+    width: 100%;
+    height: 25%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "title title description description description description"
+      "img img description description description description"
+      "img img description description description description"
+      "img img description description description description"
+      "img img description description description description"
+      "author author link link link link"; 
+}
+
+.flex-container article h3{
+    grid-area: title;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3a2c4d;
+    text-wrap: balance;
+}
+.flex-container article img{
+    grid-area: img;
+    border-radius: 8px;
+    width: 80%;
+    height: 200px;
+    object-fit: fill;
+    aspect-ratio: 4/3;
+}
+.flex-container article .author{
+    grid-area: author;
+    width: 80%;
+    font-size: 1rem;
+    color: #3a2c4d;
+    text-wrap: balance;
+    font-style: italic;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+
+.flex-container article .description{
+    grid-area: description;
+    font-size: 1rem;
+    color: #555;
+    text-wrap: balance;
+    text-align: justify;
+}
+
+
+.flex-container article a{
+    grid-area: link;
+    width: 100%;
+    height: 2rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    background-color: #3a2c4d;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: #3a2c4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f0f0f0;
+    font-size: 1rem;
+}
+        
